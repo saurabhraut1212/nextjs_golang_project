@@ -1,0 +1,14 @@
+# air.toml
+
+[build]
+# Build command: compile from ./cmd/server into ./tmp/main.exe
+cmd = "go build -o tmp/main.exe ./cmd/server"
+bin = "tmp/main.exe"
+
+# File watching
+include_ext = ["go"]
+exclude_dir = ["tmp", "vendor"]
+delay = 1000
+
+[log]
+time = true
